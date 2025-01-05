@@ -2,10 +2,12 @@
 
 namespace Submodules\PhpHelpers\Traits;
 
+use Illuminate\Database\Eloquent\Collection;
+
 trait ApiResponse
 {
   protected function successResponse(
-    array $data,
+    array|Collection $data,
     string $message = 'Success!',
     array $paginate = [],
     int $statusCode = 200,
